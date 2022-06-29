@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+main {
+    display: flex;
+}
+
+/* mobile */
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url("images/bg-intro-mobile.png");
+        background-color: hsl(0, 100%, 74%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    main{
+        background-image: url("images/bg-intro-mobile.png");
+        background-color: hsl(0, 100%, 74%); 
+        flex-direction: column;
+        z-index: 2;
+        
+    }
+
+    .firstSection{
+        position: relative;
+        width: 100%;
+        height:50%;
+        padding: 40px;
+    }
+
+    .secondSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        padding: 40px;
+    }
+}
+/* Desktop */
+@media only screen and (max-width: 1440px) {
+    body {
+        background-color: white;
+    }
+    
+    main {
+        background-image: url("images/bg-intro-desktop.png");
+        background-color: hsl(0, 100%, 74%);
+        height: 70vh;
+        width: 90%;
+        padding: 80px;
+    }
+
+    .firstSection{
+        position: relative;
+        width: 50%;
+        height:100%;
+        padding: 40px;
+    }
+
+    .secondSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .halfCircle1 {
+        position: absolute;
+        top: 1%;
+        left: 10%;
+        transform: translate(-50%, -50%); 
+        width: 200px;
+        height: 100px; 
+        background-color: white;
+        border-top-left-radius: 110px;  
+        border-top-right-radius: 110px; 
+        border: 10px solid hsl(246, 25%, 77%);
+        border-bottom: 0;
+    }
+    
+    .square {
+        position: absolute;
+        top: 60% !important;
+        left:0.5% !important;
+        z-index: -1;
+    }
+    
+    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6{
+        height: 15px;
+        width: 15px;    
+        background-color: hsl(246, 25%, 77%);
+        border-radius: 50%;
+        display: inline-block;
+      } 
+}
+
+.Heading {
+    color: white;
+}
+
+.description {
+    font-size: 16px;
+    color: white;
+}
+
+
+.secondSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+}
+
+.trail {
+    
+    background-color:  hsl(248, 32%, 49%);
+    color: white;
+    font-size: xx-small;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.LogInPage {
+    
+    background-color:  hsl(248, 32%, 49%);
+    color: white;
+    font-size: larger;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.signUpWithTermsAndConditions {
+    
+     
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0 ,0 ,0 ,0.3);
+    width: 400px;     
+  }
+
+/*Section for the sign up information*/
+ 
+.logginDetail {
+    padding: 15px 25px;
+}
+
+.signInDetail {
+    padding: 15px 25px;
+}
+
+.form-control {
+    margin-bottom:  5px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.form-control input {
+    padding: 10px;
+    width: 100%;
+    display: block;
+}
+
+.form-control.success input {
+    border-color: hsl(154, 59%, 51%);
+}
+
+.form-control.error input {
+    border-color: hsl(0, 100%, 74%) ;
+}
+
+.form-control i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: hsl(154, 59%, 51%);
+}
+
+.form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: hsl(0, 100%, 74%);
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    font-size: xx-small;
+    bottom: -2px;
+    right: 0;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: hsl(0, 100%, 74%);
+}
+
+#submit{
+    cursor: pointer;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    height: 40px;
+    color: white;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+#signIn{
+    cursor: pointer;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    height: 40px;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+
+.agreement {
+    font-size: xx-small;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 10px;
+} 
+
+.forgot {
+    font-size: xx-small;
+    text-align: left;
+    margin-top: -10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+} 

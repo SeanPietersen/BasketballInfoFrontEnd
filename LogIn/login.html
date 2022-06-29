@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+  </style>
+</head>
+
+<body>
+  <div class="halfCircle1"></div>
+  <div class="square">
+    <div class="row1">
+      <div class="dot1"></div>
+      <div class="dot1"></div>
+      <div class="dot1"></div>
+    </div>
+    <div class="row2">
+      <div class="dot2"></div>
+      <div class="dot2"></div>
+      <div class="dot2"></div>
+    </div>
+    <div class="row3">
+      <div class="dot3"></div>
+      <div class="dot3"></div>
+      <div class="dot3"></div>
+    </div>
+    <div class="row4">
+      <div class="dot4"></div>
+      <div class="dot4"></div>
+      <div class="dot4"></div>
+    </div>
+    <div class="row5">
+      <div class="dot5"></div>
+      <div class="dot5"></div>
+      <div class="dot5"></div>
+    </div>
+    <div class="row6">
+      <div class="dot6"></div>
+      <div class="dot6"></div>
+      <div class="dot6"></div>
+    </div>
+  </div>
+  
+  <main>
+    <div class="firstSection">
+      <h1 class="Heading">Basketball Info</h1>
+      <p class="description">
+        Get a real life experience of basketball Players,
+        Coaches and the teams.
+      </p>
+    </div>
+    
+    <div class="secondSection">
+      <div class="LogInPage">
+        LOG IN PAGE
+      </div>
+      <div class="signUpWithTermsAndConditions">
+          <form class="signInDetail" id ="signInDetail" >     
+            <div class="form-control">
+              <input type="email" 
+              id="signInEmail"
+              placeholder="Email Address">
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+              <input type="password" 
+              id="signInPassword" 
+              placeholder="Password">
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>   
+            <button type="submit" id="submit">SIGN IN</button>
+          </form>
+        <div class="forgot">
+          <p><a href="#">Forgot Password</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="LogInUserValid.js"></script>
+  <footer>
+    <p class="attribution">
+      Coded by <a href="#">Sean Pietersen</a>.
+    </p>
+  </footer>
+</body>
+</html>
