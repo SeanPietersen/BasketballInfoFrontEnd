@@ -31,13 +31,11 @@ function checkInputs(emailValue, passwordValue)
     } 
     else if(!isEmail(emailValue)){
         setErrorFor(email, 'Email is not valid');
-        error++;
-        
+        error++;   
     }
     else
     {
-        setSuccessFor(email);
-        error = 0;
+        error += 0;
     }
 
     if(passwordValue === '')
@@ -52,8 +50,7 @@ function checkInputs(emailValue, passwordValue)
     }
     else
     {
-        setSuccessFor(password);
-        error = 0;
+        error += 0;
     }
 }
 
@@ -103,11 +100,19 @@ function confirmLogin(data)
     .then(json => {
         if(json.status === 404)
         {
-            alert("Username or password is incorrect");
+            setErrorFor(email, "Incorrect");
+            setErrorFor(password, "Incorrect");
         }
-        if(json.status === 200)
+        else
         {
-            alert(json.identityToken);
+            setSuccessFor(email);
+            setSuccessFor(password);
+            window.location.replace('http://127.0.0.1:5500/Home/home.html');
+            sessionStorage.setItem("token", json.identityToken);
+            sessionStorage.setItem("FirstName", json.user.firstName);
+            sessionStorage.setItem("LastName", json.user.lastName);
+            // logResponse("loginResponse", `localStor`)
+            // alert(json.identityToken);
         }
     })
     .catch((data) => {

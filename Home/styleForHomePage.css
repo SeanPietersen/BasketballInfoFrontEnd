@@ -1,0 +1,145 @@
+body{
+    margin-top: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainheader{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+     height:60px;
+    top: 0;
+    background-color: rgb(231, 226, 226);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#navbarLeft{
+    display: block;
+    position: relative;
+    margin: 0;
+}
+
+#navbarRight{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+#navbarRight>ul{
+    list-style: none;
+}
+
+#navbarRight>ul>li>a{
+    text-decoration: none;
+}
+
+#profilePicture{
+    background-color: black;
+    border-radius: 50%;
+    border-color: black;
+    
+}
+
+#navbarRight .dd_menu {
+    position: absolute;
+    top:47px;
+    right: -25px;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    border-radius: 15px;
+}
+
+#navbarRight .dd_menu .dd_left{
+    background: #74ded8;
+    padding:15px 20px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    
+}
+
+#logoIcon {
+    margin-left: 30px;
+    margin-top: 10px;
+    float: left;
+}
+#logoIcon>img{
+    border-radius: 50%;
+}
+
+#menuOptions{
+    width: 400px;
+    float: left;
+}
+
+#menuOptions>ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menuOptions>ul>li{
+    list-style: none;
+    margin-left: 50px;
+}
+
+#menuOptions>ul>li>a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+#mainSection{
+    width: 100%;
+     background: linear-gradient(to top, rgba(185, 175, 175, 0.5)50%, rgba(185, 175, 175, 0.5)50%), url(/Home/images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 60px;
+    display: flex;
+    z-index: -1;
+}
+
+#leftmenu {
+    float: left;
+    width: 30%;
+    margin-left: 10px;
+}
+
+#leftmenu>ul>li{
+    margin-top: 10px;
+    list-style: none;
+}
+#leftmenu>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-weight: bold;
+}
+#searchbox{
+    width: 80%;
+    margin: auto;
+}
+
+main{
+    width: 70%;
+    display: block;
+}
+main>figure>img{
+    border-radius: 20px;
+}
+
+
+
+
+
+
+

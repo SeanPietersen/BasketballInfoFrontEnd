@@ -38,9 +38,8 @@ function checkInputs(firstNameValue, lastNameValue, emailValue, passwordValue, p
         setErrorFor(firstName, 'First Name cannot be empty');
         error++;
     }
-    else
-    {
-        setSuccessFor(firstName);
+    else{
+        error = 0;
     }
 
     if(lastNameValue === '')
@@ -48,9 +47,8 @@ function checkInputs(firstNameValue, lastNameValue, emailValue, passwordValue, p
         setErrorFor(lastName, 'Last Name cannot be empty');
         error++;
     }
-    else
-    {
-        setSuccessFor(lastName);
+    else {
+        error = 0;
     }
 
     if(emailValue === '')
@@ -62,9 +60,8 @@ function checkInputs(firstNameValue, lastNameValue, emailValue, passwordValue, p
         setErrorFor(email, 'Email is not valid');
         error++;
     }
-    else
-    {
-        setSuccessFor(email);
+    else{
+        error = 0;
     }
 
     if(passwordValue === '')
@@ -77,9 +74,8 @@ function checkInputs(firstNameValue, lastNameValue, emailValue, passwordValue, p
         setErrorFor(password, 'Password must be at least 8 characters long with 1 letter and 1 number.');
         error++;
     }
-    else
-    {
-        setSuccessFor(password);
+    else{
+        error = 0;
     }
 
     if(passwordConfirmValue === '')
@@ -92,9 +88,8 @@ function checkInputs(firstNameValue, lastNameValue, emailValue, passwordValue, p
         setErrorFor(passwordConfirm, 'Passwords do not match');
         error++;
     }
-    else
-    {
-        setSuccessFor(passwordConfirm);
+    else {
+        error = 0;
     }
 }
 
@@ -142,13 +137,20 @@ function confirmLogin(data)
     })
     .then(response => response.json())
     .then(json => {
-        if(json.status === 200)
-        {
-            alert(json.identityToken);
-        }
         if(json.status === 409)
         {
-            alert("User already exists");
+            setErrorFor(email, 'User already exists');
+            
+        }
+        else
+        {
+            setSuccessFor(firstName);
+            setSuccessFor(lastName);
+            setSuccessFor(email);
+            setSuccessFor(password);
+            setSuccessFor(passwordConfirm);
+            window.location.replace('http://127.0.0.1:5500/Home/home.html');
+            // alert(json.identityToken);
         }
         
     })
